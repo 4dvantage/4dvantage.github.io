@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- COME WORK WITH US! -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +18,20 @@
                 /* align-items: center; */
                 height: 100vh; /* Full viewport height */
                 padding-left: 32px; /* Left align with some padding */
-                font-size: 1.2rem; /* Increase the font size */
+                font-size: 1.6rem; /* Increase the font size */
+                font-family: 'Courier New', monospace; /* Monospace font */
             }
-            div {
+            .rd {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
             }
-            p {
-                font-family: 'Courier New', monospace; /* Monospace font */
+            .cd {
+                display: flex;
+                flex-direction: column;
+            }
+            a {
+                font-size: 1.1rem;
             }
             img {
                 max-width: 32px; /* Set the maximum width */
@@ -42,7 +48,11 @@
         </style>
     </head>
     <body>
-        <div><p>sufficiently advanced</p><img src="/image/octopus_1f419.gif"></div>
+        <div class="rd" style="font-size: 2rem;"><p>sufficiently advanced</p><img src="/image/octopus_1f419.gif"></div>
         <p><a href="https://docs.google.com/document/d/1U3OwVytgGPVHPdvBnG4eJUSbZvixO9TjyboVu0WNgrs/edit?usp=sharing">we're hiring!</a> 🦾 🤖 🧠 📷</p>
+        <div class="cd" style="margin-top: 32px;">
+            <span>Team</span>
+            <span style="margin-top: 5px;"><a href="https://www.linkedin.com/in/peter0">Peter Li</a>, <a href="https://www.linkedin.com/in/kashyapas">Akshay Kashyap</a></span>
+        </div>
     </body>
 </html>
