@@ -6,14 +6,15 @@
         <title>sufficiently advanced</title>
         <link rel="icon" href="image/octopus_16px.png" type="image/png">
         <style>
-        body {
+            body {
                 background-color: #0d1117; 
                 color: #f0f0f0;
                 font-family: Arial, sans-serif; /* Simple font */
                 margin: 0;
                 display: flex;
-                justify-content: flex-start;
-                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                /* align-items: center; */
                 height: 100vh; /* Full viewport height */
                 padding-left: 32px; /* Left align with some padding */
                 font-size: 1.2rem; /* Increase the font size */
@@ -25,11 +26,15 @@
                 height: auto;
                 padding-left: 8px;
             }
+            a {
+                color: #f0f0f0; /* Blue color */
+                /* add underline */
+                text-decoration: underline;
+            }
         </style>
     </head>
     <body>
-        sufficiently advanced <img src="/image/octopus_1f419.gif">
-        <br />
-        <a href="https://docs.google.com/document/d/1U3OwVytgGPVHPdvBnG4eJUSbZvixO9TjyboVu0WNgrs/edit?usp=sharing">We're hiring!</a>
+        <p>sufficiently advanced <img src="/image/octopus_1f419.gif"></p>
+        <p><a href="https://docs.google.com/document/d/1U3OwVytgGPVHPdvBnG4eJUSbZvixO9TjyboVu0WNgrs/edit?usp=sharing">we're hiring!</a> 🦾 🤖 📷</p>
     </body>
 </html>
