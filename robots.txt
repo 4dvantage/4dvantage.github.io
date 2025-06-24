@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /research/
+Disallow: /research
+
+# Allow everything else
+Allow: /
