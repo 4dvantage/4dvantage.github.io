@@ -9,10 +9,89 @@
     <meta name="googlebot" content="noindex, nofollow">
     
     <title>Research - Sufficiently Advanced</title>
+        <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 4px solid black;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px; /* Slightly smaller than wrapper to account for border */
+        }
+        
+        .image-wrapper {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            /* No margin-top to ensure no gap between video and image */
+        }
+        
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Optional: Add controls styling */
+        video::-webkit-media-controls-panel {
+            background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        }
+    </style>
 </head>
 <body>
     <!-- Your research page content -->
     <h1>Research</h1>
-    <p>This page is not indexed by search engines.</p>
+    <p>Sufficiently Advanced is building productive AI into the world. We are engineers, scientists, and hackers that build value. While classic robotic automation excels at handling predictable rigid objects like boxes and automotive parts, it cannot effectively manage non-rigid materials such as fabric due to their complex behavior, leaving major industries reliant on manual or outdated processes. We have been developing modular and interpretable robotic models that can generalize to messy and chaotic states.</p>
+
+        <div class="container">
+        <!-- Video Player -->
+        <div class="video-wrapper">
+            <video controls poster="https://via.placeholder.com/800x450/333/fff?text=Video+Placeholder">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <!-- PNG Image Placeholder -->
+        <div class="image-wrapper">
+            <img src="https://github.com/4dvantage/4dvantage.github.io/blob/main/image/layout1.png?raw=true" alt="Layout 1">
+        </div>
+    </div>
+    
+    <script>
+        // Optional: Add custom video controls or functionality
+        const video = document.querySelector('video');
+        
+        // Example: Play/pause on click
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    </script>
 </body>
 </html>
