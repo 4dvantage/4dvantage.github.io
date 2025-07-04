@@ -82,7 +82,8 @@
         }
 
         .system7-btn {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     padding: 6px 16px;
     font-family: "Chicago", "Helvetica", sans-serif;
     font-size: 12px;
@@ -93,13 +94,10 @@
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    margin: 4px;
     min-width: 75px;
     text-align: center;
     position: relative;
-    
-    /* Minimal flat shadow for depth */
-    box-shadow: 1px 1px 0px #808080;
+
 }
 
 .system7-btn:hover {
@@ -185,6 +183,60 @@
     right: 1px;
     bottom: 1px;
 }
+
+.containersmall {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.block {
+    background: #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.block h2 {
+    color: #000;
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+
+.block p {
+    color: #666;
+    font-size: 10pt;
+    margin: 0;
+}
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .containersmall {
+        grid-template-columns: 1fr;
+        max-width: 250px;
+
+    }
+}
+a {
+    text-decoration: none !important; /* Force remove underline */
+    border: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none !important; /* Keep underline removed on hover */
+}
+a:visited {
+    text-decoration: none !important;
+}
+a:active {
+    text-decoration: none !important;
+}
     </style>
 </head>
 <body>
@@ -195,32 +247,55 @@
     <!-- Your research page content -->
     <h1>Research</h1>
     <p>Sufficiently Advanced is building productive AI into the world. We are engineers, scientists, and hackers that build value. While classic robotic automation excels at handling predictable rigid objects like boxes and automotive parts, it cannot effectively manage non-rigid materials such as fabric due to their complex behavior, leaving major industries reliant on manual or outdated processes. We have been developing modular and interpretable robotic models that can generalize to messy and chaotic states.</p>
-    <img src="image/500px-NSF_logo.png" alt="NSF" width="50px">
+    <img src="../image/500px-NSF_logo.png" alt="NSF" width="50px" class="center-img">
     <div class="container">
         <div style="height: 60px;"></div>
-        <img src="image/superseries.png" alt="SuperSeries" height="80px">
+        <img src="../image/superseries.png" alt="SuperSeries" height="80px">
         Introducing Super Series®, a set of modular and interpretable capabilities for linen services, starting with Super Sort ® and Super Pick ®. These solutions demonstrate an economically viable solution for a variety of tasks. 
         <div style="height: 60px;"></div>
-        <img src="image/supersort.png" alt="SuperSort" height="60px">
-        Our Super Sort® system processes over 1,400 pieces per hour with a 97% success rate per 56 sqft workcell. This single workcell can amplify human productivity by 4x through our innovative parallelizable workflow, seamlessly integrating with your existing operations across multiple modular capabilities.
-        <div style="height: 20px;"></div>
+        <img src="../image/supersort.png" alt="SuperSort" height="60px">
+        Our Super Sort® system processes soiled linens. This single workcell can amplify human productivity by 4x through our innovative parallelizable workflow, seamlessly integrating with your existing operations across multiple modular capabilities.
+        <div style="height: 40px;"></div>
         <!-- Video Player -->
         <div class="video-wrapper">
             <video controls poster="https://via.placeholder.com/800x450/333/fff?text=Video+Placeholder">
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                <source src="../image/demo1.mp4" type="video/mp4">
+                <source src="../image/demo1.ogg" type="video/ogg">
                 Your browser does not support the video tag.
             </video>
         </div>
         
         <!-- PNG Image Placeholder -->
         <div class="image-wrapper">
-            <img src="image/layout1.png" alt="Layout 1">
+            <img src="../image/layout1.png" alt="Layout 1">
         </div>
-        <div style="height:20px;"></div>
-        <button class="system7-btn large default">Request a Demo</button>
+        <div style="height: 20px;"></div>
+    </div>
+    <div class="containersmall">
+        <div class="block">
+            <h2>1,500</h2>
+            <p>Single Workcell Pieces Per Hour</p>
+        </div>
+        <div class="block">
+            <h2>97%</h2>
+            <p>Performance</p>
+        </div>
+        <div class="block">
+            <h2>v2.2</h2>
+            <p>S/A AI Version</p>
+        </div>
+        <div class="block">
+            <h2>56 sqft</h2>
+            <p>Single Workcell Footprint</p>
+        </div>
+    </div>
+    <div style="height:20px;"></div>
+    <div class="container">
+        <button class="system7-btn large default">
+            <a href="mailto:peter@sufadv.com?subject=Demo Request&body=Hi,%20I'm%20interested%20in%20scheduling%20a%20demo.">Request a Demo</a>
+        </button>
         <div style="height: 120px;"></div>
-        <img src="image/superpick.png" alt="SuperPick" height="60px">
+        <img src="../image/superpick.png" alt="SuperPick" height="60px">
         Our Super Pick® system processes over 1,400 pieces per hour with a 97% success rate per 56 sqft workcell.
         <div style="height: 20px;"></div>
         <!-- Video Player -->
@@ -231,14 +306,32 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        
-        <!-- PNG Image Placeholder -->
-        <div class="image-wrapper">
-            <img src="image/layout2.png" alt="Layout 1">
+    </div>
+    <!-- PNG Image Placeholder -->
+    <div class="image-wrapper">
+        <img src="../image/layout2.png" alt="Layout 1">
+    </div>
+    <div style="height:20px;"></div>
+    <div class="containersmall">
+        <div class="block">
+            <h2>400</h2>
+            <p>Single Workcell Pieces Per Hour</p>
         </div>
-        <div style="height:20px;"></div>
+        <div class="block">
+            <h2>87%</h2>
+            <p>Performance</p>
+        </div>
+        <div class="block">
+            <h2>v2.2</h2>
+            <p>S/A AI Version</p>
+        </div>
+        <div class="block">
+            <h2>28 sqft</h2>
+            <p>Single Workcell Footprint</p>
+        </div>
+    </div>
+    <div style="height:20px;"></div>
         <button class="system7-btn large default">Request a Demo</button>
-
     </div>
     
     <script>
