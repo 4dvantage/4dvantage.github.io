@@ -247,13 +247,13 @@
             text-decoration: none !important;
         }
         .location-bar {
-            background: #2e2e2e;
-            color: #c0c0c0;
+            background: linear-gradient(135deg, #444, #666);
+            color: white;
             text-align: center;
-            padding: 12px 20px;
-            font-size: 18px;
-            font-weight: 500;
-            border-radius: 16px 16px 0 0;
+            padding: 4px 20px;
+            font-size: 13px;
+            font-weight: 400;
+            border-radius: 0 0 16px 16px;
             margin-bottom: 0;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
@@ -263,7 +263,7 @@
         }
 
         .video-wrapper.with-location-bar video {
-            border-radius: 0 0 16px 16px;
+            border-radius: 16px 16px 0 0;
         }
     </style>
 </head>
@@ -286,12 +286,12 @@
         <div style="height: 40px;"></div>
         <!-- Video Player -->
         <div class="video-wrapper with-location-bar">
-            <div class="location-bar">San Francisco, CA</div>
-            <video controls poster="https://via.placeholder.com/800x450/333/fff?text=Video+Placeholder">
+            <video controls autoplay muted loop poster="https://via.placeholder.com/800x450/333/fff?text=Video+Placeholder">
                 <source src="../image/demo1.mp4" type="video/mp4">
                 <source src="../image/demo1.ogg" type="video/ogg">
                 Your browser does not support the video tag.
             </video>
+            <div class="location-bar">San Francisco, CA</div>
         </div>
         
         <!-- PNG Image Placeholder -->
