@@ -80,7 +80,7 @@
         .image-wrapper img {
             width: 100%;
             height: auto;
-            max-height: 250px;
+            max-height: 350px;
             object-fit: contain;
             display: block;
         }
@@ -265,6 +265,99 @@
         .video-wrapper.with-location-bar video {
             border-radius: 16px 16px 0 0;
         }
+
+        /* Legend styles */
+        .legend-box {
+            background-color: #f0f0e8;
+            border: 4px dotted #000;
+            padding: 15px;
+            max-width: 350px;
+            margin: 40px auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .legend-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .flow-section {
+            margin-bottom: 15px;
+        }
+
+        .flow-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .flow-symbol {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .inbound {
+            background-color: #ffff99;
+        }
+
+        .categories-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .category-number {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            background-color: #90EE90;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 12px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .category-number.teal {
+            background-color: rgb(0, 255, 255);
+        }
+        
+        .category-number.blue {
+            background-color: rgb(0, 0, 255);
+            color: #fff;
+        }
+
+        .category-text {
+            color: #000;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
@@ -284,6 +377,82 @@
         <img src="../image/supersort.png" alt="SuperSort" height="60px">
         Our SuperSort® system processes soiled linens. This single workcell can amplify human productivity by 4x through our innovative parallelizable workflow, seamlessly integrating with your existing operations across multiple modular capabilities.
         <div style="height: 40px;"></div>
+ <!-- Image and Legend Side by Side -->
+    <div style="display: flex; align-items: flex-start; gap: 20px; max-width: 800px; margin: 0 auto;">
+        <!-- PNG Image -->
+        <div style="flex: 1;">
+            <img src="../image/layout3.png" alt="Layout 1" style="width: 100%; height: auto; display: block;">
+        </div>
+        
+          <!-- Linen Sorting Legend (smaller) -->
+        <div class="legend-box" style="flex: 0 1 280px; margin: 0; padding: 12px; font-size: 11px; min-width: 250px;">
+            <div class="legend-title" style="font-size: 14px; margin-bottom: 10px;">Sample Configuration (6 SKUs)</div>
+            
+            <div class="flow-section" style="margin-bottom: 10px;">
+                <div class="flow-item" style="font-size: 11px; margin-bottom: 6px;">
+                    <div class="flow-symbol inbound" style="width: 20px; height: 20px; font-size: 12px;">X</div>
+                    <span>Inbound: Unsorted Linens</span>
+                </div>
+            </div>
+            
+            <div class="categories-title" style="font-size: 12px; margin-bottom: 8px;">Destinations: Sorted Linens</div>
+            
+            <div class="category-item" style="margin-bottom: 4px; font-size: 10px;">
+                <div class="category-number" style="width: 16px; height: 16px; font-size: 10px;">1</div>
+                <div class="category-text" style="font-size: 10px;">White with Teal Stripe Terry Cloth</div>
+            </div>
+            
+            <div class="category-item" style="margin-bottom: 4px; font-size: 10px;">
+                <div class="category-number" style="width: 16px; height: 16px; font-size: 10px;">2</div>
+                <div class="category-text" style="font-size: 10px;">Red Terry Cloth</div>
+            </div>
+            
+            <div class="category-item" style="margin-bottom: 4px; font-size: 10px;">
+                <div class="category-number teal" style="width: 16px; height: 16px; font-size: 10px;">3</div>
+                <div class="category-text" style="font-size: 10px;">Blue Polyester Napkin</div>
+            </div>
+            
+            <div class="category-item" style="margin-bottom: 4px; font-size: 10px;">
+                <div class="category-number blue" style="width: 16px; height: 16px; font-size: 10px;">4</div>
+                <div class="category-text" style="font-size: 10px;">Black Polyester Napkin</div>
+            </div>
+            
+            <div class="category-item" style="margin-bottom: 4px; font-size: 10px;">
+                <div class="category-number blue" style="width: 16px; height: 16px; font-size: 10px;">5</div>
+                <div class="category-text" style="font-size: 10px;">Yellow with Blue Stripe Terry Cloth</div>
+            </div>
+            
+            <div class="category-item" style="margin-bottom: 4px; font-size: 10px;">
+                <div class="category-number teal" style="width: 16px; height: 16px; font-size: 10px;">6</div>
+                <div class="category-text" style="font-size: 10px;">White with Orange Stripe Terry Cloth</div>
+            </div>
+            
+            <div class="robot-assignment" style="margin-top: 12px; padding-top: 10px; border-top: 2px dotted #000;">
+                <div class="categories-title" style="font-size: 12px; margin-bottom: 6px;">Robot Assignments</div>
+                <div style="margin-bottom: 6px; font-size: 11px;">
+                    <strong>Left Robot sorts:</strong> 
+                    <span style="display: inline-flex; gap: 3px; margin-left: 3px;">
+                        <span class="category-number" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">1</span>
+                        <span class="category-number" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">2</span>
+                        <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">3</span>
+                        <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">6</span>
+                    </span>
+                </div>
+                <div style="font-size: 11px;">
+                    <strong>Right Robot sorts:</strong> 
+                    <span style="display: inline-flex; gap: 3px; margin-left: 3px;">
+                        <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">3</span>
+                        <span class="category-number blue" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">4</span>
+                        <span class="category-number blue" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">5</span>
+                        <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">6</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="height: 40px;"></div>
+    
         <!-- Video Player -->
         <div class="video-wrapper with-location-bar">
             <video controls autoplay muted loop poster="https://via.placeholder.com/800x450/333/fff?text=Video+Placeholder">
@@ -294,29 +463,36 @@
             <div class="location-bar">San Francisco, CA</div>
         </div>
         
-        <!-- PNG Image Placeholder -->
-        <div class="image-wrapper">
-            <img src="../image/layout1.png" alt="Layout 1">
-        </div>
-        <div style="height: 20px;"></div>
+    <div style="height: 20px;"></div>
     </div>
+
+
     <div class="containersmall">
         <div class="block">
-            <h2>1,500</h2>
-            <p>Single Workcell Pieces Per Hour</p>
+            <h2>1,400</h2>
+            <p>Average Single Workcell PPH</p>
         </div>
         <div class="block">
-            <h2>97%</h2>
-            <p>Performance</p>
-        </div>
-        <div class="block">
-            <h2>v2.2</h2>
-            <p>S/A AI Version</p>
+            <h2>95%</h2>
+            <p>Average Accuracy</p>
         </div>
         <div class="block">
             <h2>30 sqft</h2>
             <p>Single Workcell Footprint</p>
         </div>
+        <div class="block">
+            <h2>6</h2>
+            <p>Max SKUs per Workcell</p>
+        </div>
+        <div class="block">
+            <h2>4 : 1</h2>
+            <p>Workcell : Supervisor Ratio</p>
+        </div>
+        <div class="block">
+            <h2>5,600</h2>
+            <p>4 Workcell Total PPH</p>
+        </div>
+
     </div>
     <div style="height:20px;"></div>
     <div class="container">
