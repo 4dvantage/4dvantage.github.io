@@ -343,7 +343,8 @@
         }
 
         .inbound {
-            background-color: #ffff99;
+            background-color: #4CAF50;
+            color: white;
         }
 
         .categories-title {
@@ -378,12 +379,24 @@
             text-align: center;
         }
 
-        .category-number.teal {
-            background-color: rgb(0, 255, 255);
+        .category-number.black {
+            background-color: #000;
+            color: #fff;
         }
         
-        .category-number.blue {
-            background-color: rgb(0, 0, 255);
+        .category-number.dark-grey {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .category-number.striped {
+            background: repeating-linear-gradient(
+                -45deg,
+                #000,
+                #000 3px,
+                #888 3px,
+                #888 6px
+            );
             color: #fff;
         }
 
@@ -470,40 +483,40 @@
                 
                 <div class="flow-section">
                     <div class="flow-item">
-                        <div class="flow-symbol inbound">X</div>
-                        <span>Inbound Unsorted Linens</span>
+                        <div class="flow-symbol inbound"></div>
+                        <span>Unsorted Linens Input</span>
                     </div>
                 </div>
                 
                 <div class="categories-title">Destination of Sorted Linens</div>
                 
                 <div class="category-item">
-                    <div class="category-number">1</div>
+                    <div class="category-number black">1</div>
                     <div class="category-text">White with Teal Stripe Terry Cloth</div>
                 </div>
                 
                 <div class="category-item">
-                    <div class="category-number">2</div>
+                    <div class="category-number black">2</div>
                     <div class="category-text">Red Terry Cloth</div>
                 </div>
                 
                 <div class="category-item">
-                    <div class="category-number teal">3</div>
+                    <div class="category-number striped">3</div>
                     <div class="category-text">Blue Polyester Napkin</div>
                 </div>
                 
                 <div class="category-item">
-                    <div class="category-number blue">4</div>
+                    <div class="category-number dark-grey">4</div>
                     <div class="category-text">Black Polyester Napkin</div>
                 </div>
                 
                 <div class="category-item">
-                    <div class="category-number blue">5</div>
+                    <div class="category-number dark-grey">5</div>
                     <div class="category-text">Yellow with Blue Stripe Terry Cloth</div>
                 </div>
                 
                 <div class="category-item">
-                    <div class="category-number teal">6</div>
+                    <div class="category-number striped">6</div>
                     <div class="category-text">White with Orange Stripe Terry Cloth</div>
                 </div>
                 
@@ -512,19 +525,19 @@
                     <div style="margin-bottom: 6px; font-size: 11px;">
                         <strong>Left Robot:</strong> 
                         <span style="display: inline-flex; gap: 3px; margin-left: 3px;">
-                            <span class="category-number" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">1</span>
-                            <span class="category-number" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">2</span>
-                            <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">3</span>
-                            <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">6</span>
+                            <span class="category-number black" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">1</span>
+                            <span class="category-number black" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">2</span>
+                            <span class="category-number striped" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">3</span>
+                            <span class="category-number striped" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">6</span>
                         </span>
                     </div>
                     <div style="font-size: 11px;">
                         <strong>Right Robot:</strong> 
                         <span style="display: inline-flex; gap: 3px; margin-left: 3px;">
-                            <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">3</span>
-                            <span class="category-number blue" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">4</span>
-                            <span class="category-number blue" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">5</span>
-                            <span class="category-number teal" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">6</span>
+                            <span class="category-number dark-grey" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">4</span>
+                            <span class="category-number dark-grey" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">5</span>
+                            <span class="category-number striped" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">3</span>
+                            <span class="category-number striped" style="display: inline-flex; margin-bottom: 0; width: 16px; height: 16px; font-size: 10px;">6</span>
                         </span>
                     </div>
                 </div>
