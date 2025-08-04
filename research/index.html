@@ -449,6 +449,27 @@
                 font-size: 10px;
             }
         }
+        /* Dual video container */
+        .dual-video-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .video-wrapper.small {
+            max-width: none; /* Allow it to fill the grid space */
+        }
+
+        /* Mobile responsive for dual videos */
+        @media (max-width: 768px) {
+            .dual-video-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -561,11 +582,11 @@
 
     <div class="containersmall">
         <div class="block">
-            <h2>1,400</h2>
+            <h2>1,200</h2>
             <p>Average Single Workcell PPH</p>
         </div>
         <div class="block">
-            <h2>95%</h2>
+            <h2>93%</h2>
             <p>Average Accuracy</p>
         </div>
         <div class="block">
@@ -581,7 +602,7 @@
             <p>Workcell : Supervisor Ratio</p>
         </div>
         <div class="block">
-            <h2>5,600</h2>
+            <h2>4,800</h2>
             <p>4 Workcell Total PPH</p>
         </div>
     </div>
@@ -594,17 +615,44 @@
         </button>
         <div style="height: 60px;"></div>
     </div>
+    <!-- NEW DUAL VIDEO SECTION -->
+<div class="container">
+    <div class="dual-video-container">
+        <!-- Left Video -->
+        <div class="video-wrapper small with-location-bar">
+            <video controls autoplay muted loop poster="https://via.placeholder.com/400x225/333/fff?text=Video+1">
+                <source src="../image/handoffs.mp4" type="video/mp4">
+                <source src="../image/handoffs.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            <div class="location-bar">Multi-Arm Collaboration Examples</div>
+        </div>
+        
+        <!-- Right Video -->
+        <div class="video-wrapper small with-location-bar">
+            <video controls autoplay muted loop poster="https://via.placeholder.com/400x225/333/fff?text=Video+2">
+                <source src="../image/shuffling.mp4" type="video/mp4">
+                <source src="../image/shuffling.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            <div class="location-bar">Shuffling and Detangling Examples</div>
+        </div>
+    </div>
+    
+    <div style="height: 60px;"></div>
+</div>
     <div class="container">
         <div style="height: 60px;"></div>
         <img src="../image/superpick.png" alt="SuperPick®" height="60px">
         <div style="font-family: 'Courier New', monospace; font-size: 12px;">coming soon</div>
         <div style="height: 60px;"></div>
     </div>
-    <script>
-        // Optional: Add custom video controls or functionality
-        const video = document.querySelector('video');
-        
-        // Example: Play/pause on click
+<script>
+    // Optional: Add custom video controls or functionality
+    const videos = document.querySelectorAll('video');
+    
+    // Example: Play/pause on click for all videos
+    videos.forEach(video => {
         video.addEventListener('click', function() {
             if (video.paused) {
                 video.play();
@@ -612,6 +660,7 @@
                 video.pause();
             }
         });
-    </script>
+    });
+</script>
 </body>
 </html>
